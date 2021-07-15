@@ -27,11 +27,7 @@ namespace WiderBoard.Controllers
         {
             return View();
         }
-        public IActionResult ShowDaddy()
-        {
-            return View();
-        }
-
+       
         
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
