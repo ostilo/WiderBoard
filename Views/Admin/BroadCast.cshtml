@@ -1,0 +1,122 @@
+﻿@addTagHelper *, Kendo.Mvc
+@using WiderBoard.Models
+@model List<Merchant>
+@{
+    ViewData["Title"] = "Push Update";
+
+}
+<!-- Latest compiled and minified CSS -->
+@*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">*@
+
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        padding: 30px;
+    }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+    .container {
+        padding: 2px 16px;
+    }
+</style>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-1 text-gray-800">Push Update </h1>
+    <p class="mb-4">
+        Bootstrap's default utility classes can be found on the official <a href="https://getbootstrap.com/docs">Bootstrap Documentation</a> page. The custom utilities
+        below were created to extend this theme past the default utility classes built into Bootstrap's
+        framework.
+    </p>
+
+    <br />
+
+    <div class="card">
+        <div class="dashboard_graph">
+            <div class="row x_title">
+
+
+                <!-- Post Update -->
+                <div class="col-md-6">
+
+                    <h6 class="text-gray-800">Post Widerpay App New Update</h6>
+                    <br>
+                    <form method="post" action="/Widerpay/PushUpdate">
+
+                        <label style="color:black; font-weight:bold;">Enter Update Title</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="UpdateTitle" name="Title" placeholder="Update Title" required="">
+                        </div>
+
+                        <label style="color:black; font-weight:bold;">Enter Update Message</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="UpdateMessage" name="Message" placeholder="Update Message" required="">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="UpdateType" style="color:black; font-weight:bold;" class="visually-hidden">Select Update Type</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="fa fa-genderless"></span></span>
+                                <select class="form-control" id="UpdateType" name="mType" data-title="select Update Type" required="">
+                                    <option value="1">Normal</option>
+                                    <option value="2">Critical</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <label style="color:black; font-weight:bold;">Enter New App Version</label>
+                        <div class="input-group mb-3">
+                            <input type="number" class="form-control" id="NewAppVersion" name="mversion2Widerpay" placeholder="0.00" step="0.01" pattern="^\d+(?:\.\d{1,2})?$" onblur="this.parentNode.parentNode.style.backgroundColor=/^\d+(?:\.\d{1,2})?$/.test(this.value)?'inherit':'white'" required="">
+                        </div>
+
+                        <label id="CurrentAppVersion" style="color:black; font-weight:bold;">
+                            0.00
+                        </label>
+
+
+                        <div class="col-6">
+                            <button style="padding-block:10px" class="btn-block btn-primary"> Post Update</button>
+                        </div>
+
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Oohxybr3MRAmLAMF6RkkcosoH57tGn7mM1KaaE2hLf-3LvoiQ8IHjuLS-ronsNMjimNsU9GUuWPBCfjhglVOe4KoYj-cKdmpAE-Mc_sQQa2kvdxlJptBItUSxBY2YicXaUwe9iWgDZHZE7qgD0Q6Nw">
+                    </form>
+                </div>
+
+
+
+                <div class="col-md-6">
+
+                    <form method="post" id="contactForm1" class="contact-us-form" action="/Widerpay/PushNotification">
+
+                        <h6 class="text-gray-800">Send notification to all valid users</h6>
+                        <br>
+
+                        <label style="color:black; font-weight:bold;">Enter Notification Title</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" name="notificationTitle" id="notificationTitle" placeholder="Notification Title" required="">
+                        </div>
+
+                        <label style="color:black; font-weight:bold;">Enter Notification Message</label>
+
+                        <textarea name="notificationBody" id="notificationBody" class="form-control" rows="7" cols="25" placeholder="Notification Message" required=""></textarea>
+
+                        <hr>
+
+                        <div class="col-6">
+                            <button style="padding-block:10px" class="btn-block btn-primary"> Send Message</button>
+
+                        </div>
+
+                        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8Oohxybr3MRAmLAMF6RkkcosoH57tGn7mM1KaaE2hLf-3LvoiQ8IHjuLS-ronsNMjimNsU9GUuWPBCfjhglVOe4KoYj-cKdmpAE-Mc_sQQa2kvdxlJptBItUSxBY2YicXaUwe9iWgDZHZE7qgD0Q6Nw">
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

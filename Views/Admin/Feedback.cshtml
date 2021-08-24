@@ -1,0 +1,159 @@
+﻿@addTagHelper *, Kendo.Mvc
+@using WiderBoard.Models
+@model List<Merchant>
+@*<link href="~/css/Custom/custom.min.css" rel="stylesheet">*@
+<link href="~/css/Custom/FeedbackLIst.css" rel="stylesheet">
+
+@{
+    ViewData["Title"] = "Complaints & Feedback";
+
+}
+<style>
+
+    .center_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        padding: 30px;
+    }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+    #customers {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+
+    td:nth-child(6) {
+        text-align: center;
+    }
+
+    #customers th {
+        background-color: #f2f2f2;
+    }
+
+    #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #customers tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #customers tr:hover {
+        background-color: #ddd;
+    }
+
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        color: white;
+        background-color: #9870d5; /*linear-gradient(150deg, #281483 15%, #8f6ed5 70%, #d782d9 94%);*/
+    }
+
+
+</style>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-1 text-gray-800">Complaints and Feedback </h1>
+    <p class="mb-4">
+        Bootstrap's default utility classes can be found on the official <a href="https://getbootstrap.com/docs">Bootstrap Documentation</a> page. The custom utilities
+        below were created to extend this theme past the default utility classes built into Bootstrap's
+        framework.
+    </p>
+
+
+    <br />
+    <div class="card">
+        <br />
+        <div>
+            <h4>Recent Activity</h4>
+
+            <!-- end of user messages -->
+            <ul class="messages">
+                <li>
+                    <img src="~/img/ayo.jpeg" class="avatar" alt="Avatar">
+                    <div class="message_date">
+                        <h3 class="date text-info">24</h3>
+                        <p class="month">May</p>
+                    </div>
+                    <div class="message_wrapper">
+                        <h4 class="heading">Olalekan Ayodeji</h4>
+                        <blockquote class="message">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth.</blockquote>
+                        <br />
+                        <p class="url">
+                            <span class="fs1 text-info" aria-hidden="true" data-icon=""></span>
+                            <a href="#"><i class="fa fa-paperclip"></i> User Acceptance Test.doc </a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="~/img/img.jpg" class="avatar" alt="Avatar">
+                    <div class="message_date">
+                        <h3 class="date text-error">21</h3>
+                        <p class="month">May</p>
+                    </div>
+                    <div class="message_wrapper">
+                        <h4 class="heading">Brian Michaels</h4>
+                        <blockquote class="message">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth.</blockquote>
+                        <br />
+                        <p class="url">
+                            <span class="fs1" aria-hidden="true" data-icon=""></span>
+                            <a href="#" data-original-title="">Download</a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="~/img/img.jpg" class="avatar" alt="Avatar">
+                    <div class="message_date">
+                        <h3 class="date text-info">24</h3>
+                        <p class="month">May</p>
+                    </div>
+                    <div class="message_wrapper">
+                        <h4 class="heading">Desmond Davison</h4>
+                        <blockquote class="message">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth.</blockquote>
+                        <br />
+                        <p class="url">
+                            <span class="fs1 text-info" aria-hidden="true" data-icon=""></span>
+                            <a href="#"><i class="fa fa-paperclip"></i> User Acceptance Test.doc </a>
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <img src="~/img/img.jpg" class="avatar" alt="Avatar">
+                    <div class="message_date">
+                        <h3 class="date text-info">24</h3>
+                        <p class="month">May</p>
+                    </div>
+                    <div class="message_wrapper">
+                        <h4 class="heading">Desmond Davison</h4>
+                        <blockquote class="message">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth.</blockquote>
+                        <br />
+                        <p class="url">
+                            <span class="fs1 text-info" aria-hidden="true" data-icon=""></span>
+                            <a href="#"><i class="fa fa-paperclip"></i> User Acceptance Test.doc </a>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <!-- end of user messages -->
+
+
+        </div>
+    </div>
+</div>
+
+

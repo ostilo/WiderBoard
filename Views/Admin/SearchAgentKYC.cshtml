@@ -1,0 +1,170 @@
+﻿@addTagHelper *, Kendo.Mvc
+@using WiderBoard.Models
+@model List<Merchant>
+@{
+    ViewData["Title"] = "KYC Level 1";
+
+}
+<style>
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        padding: 30px;
+    }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+</style>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-1 text-gray-800">Search Agent </h1>
+    <p class="mb-4">
+        Bootstrap's default utility classes can be found on the official <a href="https://getbootstrap.com/docs">Bootstrap Documentation</a> page. The custom utilities
+        below were created to extend this theme past the default utility classes built into Bootstrap's
+        framework.
+    </p>
+    <br />
+    <!-- Page Heading -->
+    <div class="card">
+
+        <div class="form-row">
+            <div class="form-group col-md-5">
+                <label class="small text-gray-600" for="leadCapLastName">Search By: </label>
+                <fieldset>
+                    <select class="form-control" name="programme" id="amt" required selected="selected">
+                        <option disabled class="small text-gray-300" value="">-- Search By --</option>
+                        <option value="1">TID</option>
+                        <option value="2">Merchant Name </option>
+                        <option value="3">POS Mac Address </option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="form-group col-md-7">
+
+                <br/>
+                <form class="d-none d-sm-inline-block form-inline navbar-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                               aria-label="Search" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-search fa-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+
+        </div>
+    </div>
+    <br />
+    <div class="card">
+        <br />
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12 col-lg-6 ">
+
+                    <div class="form-group form-focus">
+                        <label class="focus-label">Home Phone </label>
+                        <div class="input-group">
+                            <span class="input-group-addon"></span>
+                            <input readonly type="tel" class="form-control floating" name="HomePhone">
+                        </div>
+                        
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">Work Phone </label>
+                        <input type="tel" class="form-control floating" name="WorkPhone">
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">Mobile Phone </label>
+                        <input type="tel" class="form-control floating" name="MobilePhone">
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">MediCare No </label>
+                        <input type="text" class="form-control floating" name="MediCareNo">
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">MediCare LineNo </label>
+                        <input type="text" class="form-control floating" name="MediCareLineNo">
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">Email </label>
+                        <input type="email" class="form-control floating" name="Email">
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">Username</label>
+                        <input type="text" class="form-control floating" name="uname">
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">Password</label>
+                        <input type="password" class="form-control floating" name="pass">
+
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6 ">
+
+                    <div class="form-group form-focus">
+                        <label class="focus-label">Home Phone </label>
+                        <input type="tel" class="form-control floating" name="HomePhone">
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">Work Phone </label>
+                        <input type="tel" class="form-control floating" name="WorkPhone">
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">Mobile Phone </label>
+                        <input type="tel" class="form-control floating" name="MobilePhone">
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">MediCare No </label>
+                        <input type="text" class="form-control floating" name="MediCareNo">
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">MediCare LineNo </label>
+                        <input type="text" class="form-control floating" name="MediCareLineNo">
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">Email </label>
+                        <input type="email" class="form-control floating" name="Email">
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">Username</label>
+                        <input type="text" class="form-control floating" name="uname">
+
+                    </div>
+                    <div class="form-group form-focus">
+                        <label class="focus-label">Password</label>
+                        <input type="password" class="form-control floating" name="pass">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+</div>
+ 

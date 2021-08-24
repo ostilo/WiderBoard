@@ -1,0 +1,60 @@
+﻿@addTagHelper *, Kendo.Mvc
+@using WiderBoard.Models
+@model List<Merchant>
+@{
+    ViewData["Title"] = "POS Single";
+
+}
+<style>
+
+    .center_div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        padding: 30px;
+    }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+    .container {
+        padding: 2px 16px;
+    }
+</style>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <h1 class="h3 mb-1 text-gray-800">POS Single Upload </h1>
+    <p class="mb-4">
+        Bootstrap's default utility classes can be found on the official <a href="https://getbootstrap.com/docs">Bootstrap Documentation</a> page. The custom utilities
+        below were created to extend this theme past the default utility classes built into Bootstrap's
+        framework.
+    </p>
+</div>
+<br />
+<!-- Page Heading -->
+<div class="card">
+    <h6 class="text-gray-800">Add New POS to Record :</h6>
+    <div class="form-row">
+        <div class="form-group col-md-5">
+            <label class="small text-gray-600" for="leadCapLastName">Enter POS Mac Address: </label>
+            <input class="form-control" required id="f_oaddress" name="f_oaddress" type="text" />
+        </div>
+        
+        <div class="form-group col-md-2">
+            <label class="small text-gray-600" for="leadCapLastName"> &nbsp;</label>
+            <button style="padding-block:10px" class="btn-block btn-primary"> Add</button>
+        </div>
+    </div>
+</div>
+<br />
+
+
